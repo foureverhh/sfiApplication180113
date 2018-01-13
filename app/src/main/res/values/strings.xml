@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">sfi-Tips</string>
+    <string name="solna">Solna municipality</string>
+    <string name="stockholm">Stockholm municipality</string>
+    <string name="solluntua">Solluntuna municipality</string>
+    <string name="txt_Kommun">Select your mulicipality:</string>
+    <string name="btn_Confirm">Confirm</string>
+    <string name="btn_prove">Prove little Swedish</string>
+    <string name="img_Stockholm">Stockholm</string>
+    <string name="txt_Address">Address :</string>
+    <string name="txt_OpeningHour">Opening hours :</string>
+    <string name="stockholmAddress">Södermalm,Rosenlundsgatan 52,gatuplan</string>
+    <string name="stockholmPage">
+        <a href="http://www.stockholm.se/ForskolaSkola/Vuxenutbildning/SFI---Utbildning-i-svenska-for-invandrare/Vem-far-studera/">Details Link</a>
+    </string>
+
+    <string name="weekday1">Monday</string>
+    <string name="weekday2">Tuesday</string>
+    <string name="weekday3">Wednesday</string>
+    <string name="weekday4">Thursday</string>
+    <string name="weekday5">Friday</string>
+    <string name="stockholmMonday">10:00(&#8211;)14:30</string>
+    <string name="stockholmTuesday">10:00(&#8211;)14:30</string>
+    <string name="stockholmWednesday">13:00(&#8211;)17:30</string>
+    <string name="stockholmThursday">10:00(&#8211;)14:30</string>
+    <string name="stockholmFriday">Close</string>
+
+</resources>
