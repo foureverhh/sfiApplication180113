@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nackademin.foureverhh.sfiapplication180113">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +20,8 @@
         </activity>
         <activity android:name=".Stockholm" />
         <activity android:name=".Sollentuna" />
-        <activity android:name=".Solna"></activity>
+        <activity android:name=".Solna" />
+        <activity android:name=".WordPuzzle"></activity>
     </application>
 
 </manifest>

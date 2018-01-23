@@ -25,4 +25,10 @@
     <string name="stockholmThursday">10:00(&#8211;)14:30</string>
     <string name="stockholmFriday">Close</string>
 
+    <string name="txv_word">Phrase:</string>
+    <string name="txv_wordSV">Hej d_</string>
+    <string name="txv_wordEN">Bye</string>
+    <string name="btn_choice1">ä</string>
+    <string name="btn_choice2">ö</string>
+    <string name="btn_choice3">å</string>
 </resources>
