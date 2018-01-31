@@ -19,16 +19,18 @@
     <string name="weekday3">Wednesday</string>
     <string name="weekday4">Thursday</string>
     <string name="weekday5">Friday</string>
-    <string name="stockholmMonday">10:00(&#8211;)14:30</string>
-    <string name="stockholmTuesday">10:00(&#8211;)14:30</string>
-    <string name="stockholmWednesday">13:00(&#8211;)17:30</string>
-    <string name="stockholmThursday">10:00(&#8211;)14:30</string>
+    <string name="stockholmMonday">10:00 to 14:30</string>
+    <string name="stockholmTuesday">10:00 to 14:30</string>
+    <string name="stockholmWednesday">13:00 to 17:30</string>
+    <string name="stockholmThursday">10:00 to 14:30</string>
     <string name="stockholmFriday">Close</string>
 
+    <string name="txv_title">Select the right button to match the two phrases</string>
+    <string name="imageButton">next word</string>
     <string name="txv_word">Phrase:</string>
     <string name="txv_wordSV">Hej d_</string>
     <string name="txv_wordEN">Bye</string>
     <string name="btn_choice1">ä</string>
-    <string name="btn_choice2">ö</string>
+    <string name="btn_choice2">e</string>
     <string name="btn_choice3">å</string>
 </resources>

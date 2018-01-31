@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        municipality = (RadioGroup) findViewById(R.id.rdg_Kommun);
-        confirm = (Button)findViewById(R.id.btn_Confirm);
+        municipality =  findViewById(R.id.rdg_Kommun);
+        confirm = findViewById(R.id.btn_Confirm);
         quiz = findViewById(R.id.btn_prove);
 
         confirm.setOnClickListener(this);
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Intent intent;
 
-        if(municipality.getCheckedRadioButtonId()==R.id.stockholm) {
+        if(municipality.getCheckedRadioButtonId()==R.id.stockholm && v.getId()==R.id.btn_Confirm) {
             intent = new Intent(this,Stockholm.class);
             startActivity(intent);
         }

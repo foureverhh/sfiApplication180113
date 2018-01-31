@@ -5,29 +5,103 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class WordPuzzle extends AppCompatActivity implements View.OnClickListener {
+public class WordPuzzle extends AppCompatActivity  {
 
-    TextView txv_word,txv_result;
+    TextView txv_en,txv_sv,txv_result;
     Button   btn1,btn2,btn3;
+    WordMatching wordMatching = new WordMatching();
+    ImageButton imageButton;
+     String[] en= {"Hi", "Bye"};
+     String[] sv= {"Hej","Hej då"};
+     String[] svEmpty= {"H_j","Hej d_"};
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_puzzle);
-        txv_word = findViewById(R.id.txv_wordSV);
+        txv_sv = findViewById(R.id.txv_wordSV);
+        txv_en = findViewById(R.id.txv_wordEN);
         txv_result = findViewById(R.id.txt_quizResult);
+        imageButton = findViewById(R.id.imageButton);
 
         btn1 = findViewById(R.id.btn_choice1);
         btn2 = findViewById(R.id.btn_choice2);
         btn3 = findViewById(R.id.btn_choice3);
 
-        btn1.setOnClickListener(this);
-        btn2.setOnClickListener(this);
-        btn3.setOnClickListener(this);
+        txv_en.setText(wordMatching.en[wordMatching.getCounter()]);
+        txv_sv.setText(wordMatching.svEmpty[wordMatching.getCounter()]);
     }
 
+    public void button1Click(View view)
+    {
+       switch (wordMatching.getCounter())
+       {
+           case 0:
+               result(btn1,wordMatching.match(wordMatching.svEmpty[wordMatching.getCounter()],wordMatching.getCounter()));
+               break;
+           case 1:
+               result(btn1,wordMatching.match(wordMatching.sv[wordMatching.getCounter()],wordMatching.getCounter()));
+               imageButton.setVisibility(View.VISIBLE);
+               break;
+
+       }
+    }
+
+    public void button2Click(View view)
+    {
+        switch (wordMatching.getCounter())
+        {
+            case 0:
+                result(btn2,wordMatching.match(wordMatching.svEmpty[wordMatching.getCounter()],wordMatching.getCounter()));
+                break;
+            case 1:
+                result(btn2,wordMatching.match(wordMatching.svEmpty[wordMatching.getCounter()],wordMatching.getCounter()));
+                break;
+
+        }
+    }
+
+    public void button3Click(View view)
+    {
+        switch (wordMatching.getCounter())
+        {
+            case 0:
+                result(btn3,wordMatching.match(wordMatching.sv[wordMatching.getCounter()],wordMatching.getCounter()));
+                imageButton.setVisibility(View.VISIBLE);
+                break;
+            case 1:
+                result(btn3,wordMatching.match(wordMatching.svEmpty[wordMatching.getCounter()],wordMatching.getCounter()));
+                break;
+
+        }
+    }
+
+
+
+    public void result(Button btn,boolean bool)
+    {
+        if(bool)
+        {
+            txv_result.setText("It is wrong, try again!");
+            btn.setBackgroundColor(Color.RED);
+        }else
+        {
+            txv_result.setText("You are right, congratulation!");
+            btn.setBackgroundColor(Color.GREEN);
+        }
+    }
+
+    public void counterRise(View view)
+    {
+        wordMatching.nextWord();
+    }
+
+/*
     @Override
     public void onClick(View v)
     {
@@ -49,5 +123,5 @@ public class WordPuzzle extends AppCompatActivity implements View.OnClickListene
         }
 
 
-    }
+    }*/
 }
