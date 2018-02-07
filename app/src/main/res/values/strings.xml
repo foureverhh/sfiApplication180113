@@ -30,7 +30,7 @@
     <string name="txv_word">Phrase:</string>
     <string name="txv_wordSV">Hej d_</string>
     <string name="txv_wordEN">Bye</string>
-    <string name="btn_choice1">ä</string>
-    <string name="btn_choice2">e</string>
-    <string name="btn_choice3">å</string>
+    <string name="btn_choice1"></string>
+    <string name="btn_choice2"></string>
+    <string name="btn_choice3"></string>
 </resources>
