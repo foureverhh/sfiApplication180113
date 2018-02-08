@@ -60,7 +60,7 @@ public class WordMatching
         }
 
         String letter3 = alphabet[RANDOM.nextInt(alphabet.length)];
-        while(letter3.equals(String.valueOf(rightLetter)) || letter3.equals(String.valueOf(rightLetter)))
+        while(letter3.equals(String.valueOf(rightLetter)) || letter3.equals(letter2))
         {
             letter3 = alphabet[RANDOM.nextInt(alphabet.length)];
         }

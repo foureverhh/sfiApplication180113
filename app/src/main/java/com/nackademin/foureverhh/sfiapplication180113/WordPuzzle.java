@@ -63,10 +63,13 @@ public class WordPuzzle extends AppCompatActivity implements View.OnClickListene
            btn1.setOnClickListener(this);
            btn2.setOnClickListener(this);
            btn3.setOnClickListener(this);
-           if(nextPage.getVisibility()==View.VISIBLE)
+           nextPage.setOnClickListener(this);
+          /* if(nextPage.getVisibility()==View.VISIBLE)
            {
-
+                wordMatching.counterPlus();
            }
+*/          wordMatching.counterPlus();
+
        }
     }
 
@@ -107,10 +110,10 @@ public class WordPuzzle extends AppCompatActivity implements View.OnClickListene
         }
     }*/
 
-    public void counterRise(View view) {
-
+   /* public void counterRise(View view) {
+        wordMatching.counterPlus();
         nextPage.setVisibility(View.INVISIBLE);
-    }
+    }*/
 
     public void getRightAnswer(String buttonLetter,String rLetter,Button btnChosen,Button btnWrong1,Button btnWrong2)
     {
@@ -159,6 +162,11 @@ public class WordPuzzle extends AppCompatActivity implements View.OnClickListene
                 btnChoice = btn3.getText().toString().toLowerCase();
                 Log.d("Button 3 letter is :",btnChoice);
                 getRightAnswer(btnChoice,String.valueOf(rightLetter),btn3,btn1,btn2);
+                break;
+
+            case R.id.imageButton:
+                wordMatching.counterPlus();
+                nextPage.setVisibility(View.INVISIBLE);
                 break;
 
         }
