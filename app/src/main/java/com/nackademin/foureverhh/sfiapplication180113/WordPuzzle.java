@@ -14,9 +14,10 @@ public class WordPuzzle extends AppCompatActivity implements View.OnClickListene
     TextView txv_en, txv_sv, txv_result;
     Button btn1, btn2, btn3;
     WordMatching wordMatching = new WordMatching();
-    ImageButton nextPage;
+    ImageButton nextWord;
     String[] buttonLetters;
     char rightLetter;
+    boolean next;
 
 
     @Override
@@ -26,17 +27,19 @@ public class WordPuzzle extends AppCompatActivity implements View.OnClickListene
         txv_sv = findViewById(R.id.txv_wordSV);
         txv_en = findViewById(R.id.txv_wordEN);
         txv_result = findViewById(R.id.txt_quizResult);
-        nextPage = findViewById(R.id.imageButton);
+        nextWord = findViewById(R.id.imageButton);
 
         btn1 = findViewById(R.id.btn_choice1);
         btn2 = findViewById(R.id.btn_choice2);
         btn3 = findViewById(R.id.btn_choice3);
+        next = false;
 
-       while(wordMatching.getCounter()<wordMatching.sv.length)
+      while(wordMatching.getCounter()<wordMatching.sv.length)
        {
            rightLetter = wordMatching.takeRightLetter(wordMatching.svWord);
            Log.d("The right letter is ", String.valueOf(rightLetter));
-
+Log.d("The Swedish word",wordMatching.svWord);
+           wordMatching.counter();
            //To show the English word
            txv_en.setText(wordMatching.enWord);
 
@@ -63,13 +66,16 @@ public class WordPuzzle extends AppCompatActivity implements View.OnClickListene
            btn1.setOnClickListener(this);
            btn2.setOnClickListener(this);
            btn3.setOnClickListener(this);
-           nextPage.setOnClickListener(this);
+           nextWord.setOnClickListener(this);
           /* if(nextPage.getVisibility()==View.VISIBLE)
            {
                 wordMatching.counterPlus();
            }
-*/          wordMatching.counterPlus();
 
+*/       /* Log.d("Counter in while 1",String.valueOf(wordMatching.getCounter()));
+          wordMatching.counterPlus();
+           Log.d("Counter in while 2",String.valueOf(wordMatching.getCounter()));*/
+           wordMatching.counterPlus();
        }
     }
 
@@ -123,7 +129,8 @@ public class WordPuzzle extends AppCompatActivity implements View.OnClickListene
             btnChosen.setBackgroundColor(Color.GREEN);
             btnWrong1.setBackgroundColor(Color.GRAY);
             btnWrong2.setBackgroundColor(Color.GRAY);
-            nextPage.setVisibility(View.VISIBLE);
+            nextWord.setVisibility(View.VISIBLE);
+            Log.d("Counter in next",String.valueOf(wordMatching.getCounter()));
           /*  //To show the English word
             txv_en.setText(wordMatching.enWord);
 
@@ -136,7 +143,7 @@ public class WordPuzzle extends AppCompatActivity implements View.OnClickListene
             btnChosen.setBackgroundColor(Color.RED);
             btnWrong1.setBackgroundColor(Color.GRAY);
             btnWrong2.setBackgroundColor(Color.GRAY);
-            nextPage.setVisibility(View.INVISIBLE);
+            nextWord.setVisibility(View.INVISIBLE);
 
         }
     }
@@ -166,7 +173,7 @@ public class WordPuzzle extends AppCompatActivity implements View.OnClickListene
 
             case R.id.imageButton:
                 wordMatching.counterPlus();
-                nextPage.setVisibility(View.INVISIBLE);
+                nextWord.setVisibility(View.INVISIBLE);
                 break;
 
         }

@@ -1,5 +1,7 @@
 package com.nackademin.foureverhh.sfiapplication180113;
 
+import android.util.Log;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,12 +21,19 @@ public class WordMatching
             "M","N","O","P","Q","R",
             "S","T","U","V","W","X",
             "Y","Z","Ä","Ö","Å"};
-  private int counter = 0;
+  private int counter=0;
+
 
   String enWord= en[counter];
   String svWord=sv[counter];
 
   final Random RANDOM = new Random();
+
+  public void counter()
+  {
+      Log.d("Counter in Class",String.valueOf(getCounter())+" "+svWord);
+      Log.d("sv[1] is ",sv[1]);
+  }
 
   //Get the right answer to the board
     public  char takeRightLetter(String svWord)
@@ -113,6 +122,11 @@ public class WordMatching
     public void counterPlus()
     {
         counter++;
+        if(counter<4) {
+            enWord = en[counter];
+            svWord = sv[counter];
+        }
+        Log.d("Index is ",String.valueOf(counter));
     }
 
     public int getCounter() {
