@@ -33,4 +33,7 @@
     <string name="btn_choice1"></string>
     <string name="btn_choice2"></string>
     <string name="btn_choice3"></string>
+    <string name="rightResult">Congratulation, you are right!</string>
+    <string name="wrongResult">You are close to it, try again!</string>
+    <string name="gameOver">Congratulation, you have finished all questions!</string>
 </resources>
