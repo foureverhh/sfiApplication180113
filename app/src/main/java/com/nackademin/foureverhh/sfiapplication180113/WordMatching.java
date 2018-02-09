@@ -122,10 +122,7 @@ public class WordMatching
     public void counterPlus()
     {
         counter++;
-        if(counter<4) {
-            enWord = en[counter];
-            svWord = sv[counter];
-        }
+
         Log.d("Index is ",String.valueOf(counter));
     }
 
