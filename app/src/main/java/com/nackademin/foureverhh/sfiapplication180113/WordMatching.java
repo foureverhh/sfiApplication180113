@@ -29,11 +29,6 @@ public class WordMatching
 
   final Random RANDOM = new Random();
 
-  public void counter()
-  {
-      Log.d("Counter in Class",String.valueOf(getCounter())+" "+svWord);
-      Log.d("sv[1] is ",sv[1]);
-  }
 
   //Get the right answer to the board
     public  char takeRightLetter(String svWord)
@@ -56,7 +51,11 @@ public class WordMatching
 
   }
 
-
+public String displayRightAnswer(String rightLetter,String displayString)
+{
+    int index = displayString.indexOf("_");
+    return displayString.substring(0,index)+rightLetter+displayString.substring(index+1);
+}
 
   //Get the all three letters from the alphabet
     public String[] getAllThreeLetters(char rightLetter,String[] alphabet)

@@ -108,6 +108,7 @@ public class WordPuzzle extends AppCompatActivity {
             nextWord.setVisibility(View.VISIBLE);
             String result = getResources().getString(R.string.rightResult);
             txv_result.setText(result);
+            txv_sv.setText(wordMatching.displayRightAnswer(rLetter,txv_sv.getText().toString()));
 
 
         }else
@@ -136,8 +137,7 @@ public class WordPuzzle extends AppCompatActivity {
              {
                  String result = getResources().getString(R.string.gameOver);
                  txv_result.setText(result);
-                 Intent intent = new Intent(this, MainActivity.class);
-                 startActivity(intent);
+                 nextWord.setVisibility(View.INVISIBLE);
              }
          }
 

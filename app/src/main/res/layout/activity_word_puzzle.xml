@@ -27,7 +27,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="97dp"
-        android:text="@string/txv_wordEN"
+
         android:textColor="@android:color/holo_blue_light"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/txv_wordSV"
@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="152dp"
-        android:text="@string/txv_wordSV"
+
         android:textColor="@android:color/holo_blue_light"
         android:textSize="30sp"
         app:layout_constraintHorizontal_bias="0.501"
@@ -56,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="240dp"
-        android:onClick="button1Click"
+
         android:text="@string/btn_choice1"
 
         android:textSize="20sp"
@@ -68,7 +68,7 @@
 
     <Button
         android:id="@+id/btn_choice2"
-        android:onClick="button2Click"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="240dp"
@@ -83,7 +83,7 @@
 
     <Button
         android:id="@+id/btn_choice3"
-        android:onClick="button3Click"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="240dp"
@@ -96,9 +96,10 @@
 
     <TextView
         android:id="@+id/txt_quizResult"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:gravity="center_vertical"
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
