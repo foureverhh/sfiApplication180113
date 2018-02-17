@@ -38,7 +38,9 @@ public class WordMatching
         {
             index = RANDOM.nextInt(svWord.length());
         }
+        Log.d("The right letter is ",String.valueOf(svWord.charAt(index)));
         return svWord.charAt(index);
+
     }
 
 
@@ -74,6 +76,61 @@ public String displayRightAnswer(String rightLetter,String displayString)
         }
 
         String[] threeLetters = {String.valueOf(rightLetter),letter2,letter3};
+        return  threeLetters;
+    }
+
+    public String[] getAllThreeLettersTest(char rightLetter,String[] alphabet)
+    {
+        //Besides the right letter, from the alphabet get the other two letters.
+        String [] threeLetters = new String[3];
+        //Get the index of the right letter from alphabet
+        int index=0;
+        String rightButton = String.valueOf(rightLetter);
+        for(int i = 0;i<alphabet.length;i++)
+        {
+            if (alphabet[i].equalsIgnoreCase(rightButton))
+            {
+                index = i;
+                break;
+            }
+        }
+        //Exchange the right letter and the last letter
+        String temp;
+        temp = alphabet[alphabet.length-1]; //Let temp has the value of the last letter in alphabet
+        alphabet[alphabet.length-1] = alphabet[index];
+        alphabet[index] = temp;
+
+        //Make a string array without the last letter
+        String[] alphabetShort = new String[alphabet.length-1];
+        for(int i= 0; i<alphabet.length-2;i++)
+            alphabetShort[i]=alphabet[i];
+        for(int i= 0; i<alphabetShort.length;i++) {
+            temp = alphabetShort[i];
+            alphabetShort[i]=alphabetShort[RANDOM.nextInt(alphabetShort.length)];
+            alphabetShort[RANDOM.nextInt(alphabetShort.length)]=temp;
+
+        }
+
+        /*//Each time change the letter on last position i with the letter on random position on j
+        for(int i=alphabet.length-2;i>alphabet.length-4;i--)
+        {
+            for (int j = 0; j < alphabet.length - 1 - i; j++) {
+                for(int k=0; k<alphabet.length-1-j;k++) {
+                    temp = alphabet[k];
+                    alphabet[k]=alphabet[RANDOM.nextInt(alphabet.length - 1)];
+                    alphabet[RANDOM.nextInt(alphabet.length - 1)]=temp;
+                }
+                temp = alphabet[j];
+                alphabet[j]=alphabet[i];
+                alphabet[i]= temp;
+
+            }
+        }*/
+
+        for (int k = 0; k<2;k++)
+            threeLetters[k]=alphabetShort[alphabetShort.length-6-k];
+
+        threeLetters[2]=alphabet[alphabet.length-1];
         return  threeLetters;
     }
 

@@ -49,13 +49,13 @@ public class WordPuzzle extends AppCompatActivity {
 
         //Get three letters for the 3 buttons
             threeLetters
-                    = wordMatching.getAllThreeLetters(rightLetter, wordMatching.alphabet);
+                    = wordMatching.getAllThreeLettersTest(rightLetter, wordMatching.alphabet);
             for (String str : threeLetters)
-                Log.d("The three letters are: ", str);
+
             //Get random letters for the 3 buttons
             buttonLetters = wordMatching.getRandomSequence3Letters(threeLetters);
             for (String str : buttonLetters)
-                Log.d("The three letters", str);
+
 
             btn1.setText(buttonLetters[0]);
             btn2.setText(buttonLetters[1]);
@@ -66,7 +66,6 @@ public class WordPuzzle extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     String btnChoice = btn1.getText().toString().toLowerCase();
-                    Log.d("Button 1 letter is :", btnChoice);
                     getRightAnswer(btnChoice, String.valueOf(rightLetter), btn1, btn2, btn3);
                 }
             });
@@ -75,7 +74,6 @@ public class WordPuzzle extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     String btnChoice = btn2.getText().toString().toLowerCase();
-                    Log.d("Button 2 letter is :", btnChoice);
                     getRightAnswer(btnChoice, String.valueOf(rightLetter), btn2, btn1, btn3);
                 }
             });
@@ -84,7 +82,6 @@ public class WordPuzzle extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     String btnChoice = btn3.getText().toString().toLowerCase();
-                    Log.d("Button 3 letter is :", btnChoice);
                     getRightAnswer(btnChoice, String.valueOf(rightLetter), btn3, btn1, btn2);
 
                 }

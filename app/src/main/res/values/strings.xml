@@ -7,13 +7,18 @@
     <string name="btn_Confirm">Confirm</string>
     <string name="btn_prove">Prove little Swedish</string>
     <string name="img_Stockholm">Stockholm</string>
+    <string name="img_Sollentuna">Sollentuna</string>
     <string name="txt_Address">Address :</string>
     <string name="txt_OpeningHour">Opening hours :</string>
     <string name="stockholmAddress">Södermalm,Rosenlundsgatan 52,gatuplan</string>
+    <string name="sollentuanAddress">Turebergsvägen 1B, 3 trappor</string>
+    <string name="solnaAddress"></string>
     <string name="stockholmPage">
         <a href="http://www.stockholm.se/ForskolaSkola/Vuxenutbildning/SFI---Utbildning-i-svenska-for-invandrare/Vem-far-studera/">Details Link</a>
     </string>
-
+    <string name="btn_choice1"> </string>
+    <string name="btn_choice2"> </string>
+    <string name="btn_choice3"> </string>
     <string name="weekday1">Monday</string>
     <string name="weekday2">Tuesday</string>
     <string name="weekday3">Wednesday</string>
