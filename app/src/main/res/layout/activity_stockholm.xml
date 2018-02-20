@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,11 +8,10 @@
 
     <ImageView
         android:id="@+id/img_Stockholm"
-        android:layout_width="match_parent"
-        android:layout_height="122dp"
+        android:layout_width="0dp"
+        android:layout_height="136dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:contentDescription="@string/img_Stockholm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -26,11 +25,11 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/img_Stockholm"
         android:layout_below="@+id/img_Stockholm"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="148dp"
         android:text="@string/txt_Address"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.026"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,7 +55,8 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txt_Address"
         android:layout_below="@+id/stockholmAddress"
-        android:layout_marginTop="21dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="252dp"
         android:text="@string/txt_OpeningHour"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,15 +68,18 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/stockholmAddress"
         android:layout_below="@+id/stockholmAddress"
-        android:layout_marginTop="107dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:gravity="center_vertical|center_horizontal|center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_openingHour"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
 
@@ -179,7 +182,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txt_openingHour"
         android:layout_below="@+id/stockholmOpentime"
-        android:layout_marginTop="34dp"
+        android:layout_marginBottom="48dp"
         android:autoLink="all"
         android:clickable="true"
         android:focusable="true"
@@ -187,7 +190,7 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -20,7 +20,6 @@
         </activity>
         <activity android:name=".Stockholm" />
         <activity android:name=".Sollentuna" />
-        <activity android:name=".Solna" />
         <activity android:name=".WordPuzzle"></activity>
     </application>
 

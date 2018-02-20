@@ -9,10 +9,9 @@
     <ImageView
         android:id="@+id/img_Sollentuna"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="17dp"
         android:contentDescription="@string/img_Sollentuna"
         android:src="@drawable/sollutuna" />
 
@@ -22,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/sollentunaPage"
         android:layout_below="@+id/img_Sollentuna"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="14dp"
         android:gravity=""
         android:text="@string/txt_Address" />
 
@@ -31,8 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/txt_Address"
-        android:layout_marginTop="15dp"
+        android:layout_centerVertical="true"
         android:gravity="center"
         android:text="@string/sollentuanAddress" />
 
@@ -42,7 +40,6 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txt_Address"
         android:layout_below="@+id/solluntunaAddress"
-        android:layout_marginTop="21dp"
         android:text="@string/txt_OpeningHour" />
 
     <LinearLayout
@@ -103,7 +100,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/sollentunaOpenTime"
         android:layout_marginStart="19dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="16dp"
         android:text="@string/sollentunaPage" />
 
 </RelativeLayout>

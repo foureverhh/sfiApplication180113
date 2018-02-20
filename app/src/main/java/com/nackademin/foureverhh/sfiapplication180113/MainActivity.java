@@ -38,8 +38,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Intent intent;
 
+
         if(municipality.getCheckedRadioButtonId()==R.id.stockholm && v.getId()==R.id.btn_Confirm) {
             intent = new Intent(this,Stockholm.class);
+            startActivity(intent);
+        }
+
+        if(municipality.getCheckedRadioButtonId()==R.id.solluntuna && v.getId()==R.id.btn_Confirm){
+            intent = new Intent(this,Sollentuna.class);
             startActivity(intent);
         }
 

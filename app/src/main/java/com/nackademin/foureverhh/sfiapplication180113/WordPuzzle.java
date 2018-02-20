@@ -15,7 +15,7 @@ public class WordPuzzle extends AppCompatActivity {
     TextView txv_en, txv_sv, txv_result;
     Button btn1, btn2, btn3;
     WordMatching wordMatching = new WordMatching();
-    ImageButton nextWord;
+    ImageButton nextWord,lastWord;
     String[] buttonLetters;
     String[] threeLetters;
     char rightLetter;
@@ -29,6 +29,7 @@ public class WordPuzzle extends AppCompatActivity {
         txv_en = findViewById(R.id.txv_wordEN);
         txv_result = findViewById(R.id.txt_quizResult);
         nextWord = findViewById(R.id.imageButton);
+        lastWord = findViewById(R.id.imageButton2);
 
         btn1 = findViewById(R.id.btn_choice1);
         btn2 = findViewById(R.id.btn_choice2);
@@ -48,45 +49,59 @@ public class WordPuzzle extends AppCompatActivity {
         txv_sv.setText(wordMatching.makeEmptyPlace(rightLetter, wordMatching.svWord));
 
         //Get three letters for the 3 buttons
-            threeLetters
+        threeLetters
                     = wordMatching.getAllThreeLettersTest(rightLetter, wordMatching.alphabet);
-            for (String str : threeLetters)
 
-            //Get random letters for the 3 buttons
-            buttonLetters = wordMatching.getRandomSequence3Letters(threeLetters);
-            for (String str : buttonLetters)
+        //Get random letters for the 3 buttons
+        buttonLetters = wordMatching.getRandomSequence3Letters(threeLetters);
 
-
-            btn1.setText(buttonLetters[0]);
-            btn2.setText(buttonLetters[1]);
-            btn3.setText(buttonLetters[2]);
+        btn1.setText(buttonLetters[0]);
+        btn2.setText(buttonLetters[1]);
+        btn3.setText(buttonLetters[2]);
 
 
-            btn1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        btn1.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                //If enables that when the right button is shown, the two others will not work
+                if(nextWord.getVisibility()==View.INVISIBLE)
+                {
                     String btnChoice = btn1.getText().toString().toLowerCase();
                     getRightAnswer(btnChoice, String.valueOf(rightLetter), btn1, btn2, btn3);
                 }
-            });
+            }
+        });
 
-            btn2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        btn2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                //If enables that when the right button is shown, the two others will not work
+                if(nextWord.getVisibility()==View.INVISIBLE)
+                {
                     String btnChoice = btn2.getText().toString().toLowerCase();
                     getRightAnswer(btnChoice, String.valueOf(rightLetter), btn2, btn1, btn3);
                 }
-            });
+            }
+        });
 
-            btn3.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        btn3.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                //If enables that when the right button is shown, the two others will not work
+                if(nextWord.getVisibility()==View.INVISIBLE)
+                {
                     String btnChoice = btn3.getText().toString().toLowerCase();
                     getRightAnswer(btnChoice, String.valueOf(rightLetter), btn3, btn1, btn2);
-
                 }
-            });
+            }
+        });
 
+        //All buttons will become light gray again in the end of the game
         btn1.setBackgroundColor(Color.LTGRAY);
         btn2.setBackgroundColor(Color.LTGRAY);
         btn3.setBackgroundColor(Color.LTGRAY);
@@ -103,8 +118,14 @@ public class WordPuzzle extends AppCompatActivity {
             btnWrong1.setBackgroundColor(Color.LTGRAY);
             btnWrong2.setBackgroundColor(Color.LTGRAY);
             nextWord.setVisibility(View.VISIBLE);
+            //On the first group there is no last word the last button should not show
+            if(wordMatching.getCounter()==0)
+                lastWord.setVisibility(View.INVISIBLE);
+            else
+                lastWord.setVisibility(View.VISIBLE);
             String result = getResources().getString(R.string.rightResult);
             txv_result.setText(result);
+            //Show the right answer
             txv_sv.setText(wordMatching.displayRightAnswer(rLetter,txv_sv.getText().toString()));
 
 
@@ -114,29 +135,49 @@ public class WordPuzzle extends AppCompatActivity {
             btnWrong1.setBackgroundColor(Color.LTGRAY);
             btnWrong2.setBackgroundColor(Color.LTGRAY);
             nextWord.setVisibility(View.INVISIBLE);
+            lastWord.setVisibility(View.INVISIBLE);
             String result = getResources().getString(R.string.wrongResult);
             txv_result.setText(result);
         }
     }
 
-         public void nextWord(View v)
-         {
-             //To make text_en and text_sv have new content
-             wordMatching.counterPlus();
+    public void nextWord(View v)
+    {
+        //To make text_en and text_sv have new content
+        wordMatching.counterPlus();
 
-             if(wordMatching.getCounter()<wordMatching.sv.length) {
-                 wordMatching.enWord =wordMatching.en[wordMatching.getCounter()];
-                 wordMatching.svWord = wordMatching.sv[wordMatching.getCounter()];
-                 game();
-                 nextWord.setVisibility(View.INVISIBLE);
-                 txv_result.setText(" ");
-             }else
-             {
-                 String result = getResources().getString(R.string.gameOver);
-                 txv_result.setText(result);
-                 nextWord.setVisibility(View.INVISIBLE);
-             }
-         }
+        if(wordMatching.getCounter()<wordMatching.sv.length)
+        {
+            wordMatching.enWord =wordMatching.en[wordMatching.getCounter()];
+            wordMatching.svWord = wordMatching.sv[wordMatching.getCounter()];
+            game();
+            nextWord.setVisibility(View.INVISIBLE);
+            lastWord.setVisibility(View.INVISIBLE);
+            txv_result.setText(" ");
+        }else
+        {
+            String result = getResources().getString(R.string.gameOver);
+            txv_result.setText(result);
+            nextWord.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    public void lastWord(View v)
+    {
+       /* if(wordMatching.getCounter()<=1)
+            lastWord.setVisibility(View.INVISIBLE);
+        else
+        {*/
+            wordMatching.counterMinus();
+            wordMatching.enWord =wordMatching.en[wordMatching.getCounter()];
+            wordMatching.svWord = wordMatching.sv[wordMatching.getCounter()];
+            game();
+            nextWord.setVisibility(View.INVISIBLE);
+            lastWord.setVisibility(View.INVISIBLE);
+            txv_result.setText(" ");
+
+        //}
+    }
 
 }
 

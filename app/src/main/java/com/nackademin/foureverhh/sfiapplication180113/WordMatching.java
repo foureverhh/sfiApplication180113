@@ -102,14 +102,20 @@ public String displayRightAnswer(String rightLetter,String displayString)
 
         //Make a string array without the last letter
         String[] alphabetShort = new String[alphabet.length-1];
-        for(int i= 0; i<alphabet.length-2;i++)
-            alphabetShort[i]=alphabet[i];
-        for(int i= 0; i<alphabetShort.length;i++) {
-            temp = alphabetShort[i];
-            alphabetShort[i]=alphabetShort[RANDOM.nextInt(alphabetShort.length)];
-            alphabetShort[RANDOM.nextInt(alphabetShort.length)]=temp;
-
+        for(int i= 0; i<alphabet.length-1;i++) {
+            alphabetShort[i] = alphabet[i];
+            Log.d("Alphabet after random",alphabetShort[i]);
         }
+
+        for(int i= 0; i<alphabetShort.length;i++) {
+            int randomIndex =(int)(Math.random()*alphabetShort.length);
+            String tmp = alphabetShort[randomIndex];
+            alphabetShort[randomIndex]=alphabetShort[i];
+            alphabetShort[i]=tmp;
+            Log.d("Alphabet after random ",tmp+" "+alphabetShort[i]+alphabetShort[randomIndex]+" "+randomIndex);
+        }
+        for(String str:alphabetShort)
+            Log.d("Alphabet after",str);
 
         /*//Each time change the letter on last position i with the letter on random position on j
         for(int i=alphabet.length-2;i>alphabet.length-4;i--)
@@ -178,8 +184,11 @@ public String displayRightAnswer(String rightLetter,String displayString)
     public void counterPlus()
     {
         counter++;
+    }
 
-        Log.d("Index is ",String.valueOf(counter));
+    public void counterMinus()
+    {
+        counter--;
     }
 
     public int getCounter() {
