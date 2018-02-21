@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">sfi-Tips</string>
+    <string name="stockholm">斯德哥尔摩市</string>
+    <string name="solluntua">索伦吐纳市</string>
+    <string name="txt_Kommun">选择您所在的市：</string>
+    <string name="btn_Confirm">确认</string>
+    <string name="btn_prove">感受瑞典语</string>
+    <string name="img_Stockholm">斯德哥尔摩</string>
+    <string name="img_Sollentuna">索伦吐纳</string>
+    <string name="txt_Address">地址：</string>
+    <string name="txt_OpeningHour">开放时间：</string>
+    <string name="stockholmAddress">Södermalm,Rosenlundsgatan 52,gatuplan</string>
+    <string name="sollentuanAddress">Turebergsvägen 1B, 3 trappor</string>
+
+    <string name="stockholmPage">
+        <a href="http://www.stockholm.se/ForskolaSkola/Vuxenutbildning/SFI---Utbildning-i-svenska-for-invandrare/">Details</a>
+    </string>
+    <string name="sollentunaPage">
+        <a href="https://www.sollentuna.se/sv/uweb/kunskapsparken/om-oss/drop-in-tider/">Details</a>
+    </string>
+    <string name="btn_choice1"> </string>
+    <string name="btn_choice2"> </string>
+    <string name="btn_choice3"> </string>
+    <string name="weekday1">Monday</string>
+    <string name="weekday2">Tuesday</string>
+    <string name="weekday3">Wednesday</string>
+    <string name="weekday4">Thursday</string>
+    <string name="weekday5">Friday</string>
+    <string name="stockholmMonday">10:00 to 14:30</string>
+    <string name="sollentunaMonday">10;00 to 11:30 and 14:00 to 15:30</string>
+    <string name="stockholmTuesday">10:00 to 14:30</string>
+    <string name="stockholmWednesday">13:00 to 17:30</string>
+    <string name="stockholmThursday">10:00 to 14:30</string>
+    <string name="sollentunaThursday">10;00 to 11:30 and 14:00 to 15:30</string>
+    <string name="stockholmFriday">Close</string>
+
+    <string name="txv_title">Select the right button to match the two phrases</string>
+    <string name="imageButton">next word</string>
+    <string name="imageButton2">last word</string>
+
+
+    <string name="rightResult">Congratulation, you are right!</string>
+    <string name="wrongResult">You are close to it, try again!</string>
+    <string name="gameOver">Congratulation, you have finished all questions!</string>
+</resources>

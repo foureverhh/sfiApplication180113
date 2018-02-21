@@ -25,7 +25,7 @@ public class WordMatching
 
 
   String enWord= en[counter];
-  String svWord=sv[counter];
+  String svWord= sv[counter];
 
   final Random RANDOM = new Random();
 
