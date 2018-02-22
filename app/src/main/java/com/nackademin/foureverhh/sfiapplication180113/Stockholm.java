@@ -26,7 +26,6 @@ public class Stockholm extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(STOCKHOLM_SFI_URI);
         startActivity(intent);

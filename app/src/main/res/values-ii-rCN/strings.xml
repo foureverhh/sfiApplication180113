@@ -13,33 +13,33 @@
     <string name="sollentuanAddress">Turebergsvägen 1B, 3 trappor</string>
 
     <string name="stockholmPage">
-        <a href="http://www.stockholm.se/ForskolaSkola/Vuxenutbildning/SFI---Utbildning-i-svenska-for-invandrare/">Details</a>
+        <a href="http://www.stockholm.se/ForskolaSkola/Vuxenutbildning/SFI---Utbildning-i-svenska-for-invandrare/">详情</a>
     </string>
     <string name="sollentunaPage">
-        <a href="https://www.sollentuna.se/sv/uweb/kunskapsparken/om-oss/drop-in-tider/">Details</a>
+        <a href="https://www.sollentuna.se/sv/uweb/kunskapsparken/om-oss/drop-in-tider/">详情</a>
     </string>
     <string name="btn_choice1"> </string>
     <string name="btn_choice2"> </string>
     <string name="btn_choice3"> </string>
-    <string name="weekday1">Monday</string>
-    <string name="weekday2">Tuesday</string>
-    <string name="weekday3">Wednesday</string>
-    <string name="weekday4">Thursday</string>
-    <string name="weekday5">Friday</string>
-    <string name="stockholmMonday">10:00 to 14:30</string>
-    <string name="sollentunaMonday">10;00 to 11:30 and 14:00 to 15:30</string>
-    <string name="stockholmTuesday">10:00 to 14:30</string>
-    <string name="stockholmWednesday">13:00 to 17:30</string>
-    <string name="stockholmThursday">10:00 to 14:30</string>
-    <string name="sollentunaThursday">10;00 to 11:30 and 14:00 to 15:30</string>
-    <string name="stockholmFriday">Close</string>
+    <string name="weekday1">周一</string>
+    <string name="weekday2">周二</string>
+    <string name="weekday3">周三</string>
+    <string name="weekday4">周四</string>
+    <string name="weekday5">周五</string>
+    <string name="stockholmMonday">10:00 至 14:30</string>
+    <string name="sollentunaMonday">10;00 至 11:30，14:00 至 15:30</string>
+    <string name="stockholmTuesday">10:00 至 14:30</string>
+    <string name="stockholmWednesday">13:00 至 17:30</string>
+    <string name="stockholmThursday">10:00 至 14:30</string>
+    <string name="sollentunaThursday">10;00 至 11:30 and 14:00 to 15:30</string>
+    <string name="stockholmFriday">不对外办公</string>
 
-    <string name="txv_title">Select the right button to match the two phrases</string>
-    <string name="imageButton">next word</string>
-    <string name="imageButton2">last word</string>
+    <string name="txv_title">选择正确的字母 ：</string>
+    <string name="imageButton">下一个词</string>
+    <string name="imageButton2">上一个词</string>
 
 
-    <string name="rightResult">Congratulation, you are right!</string>
-    <string name="wrongResult">You are close to it, try again!</string>
-    <string name="gameOver">Congratulation, you have finished all questions!</string>
+    <string name="rightResult">祝贺，您选对了</string>
+    <string name="wrongResult">再来一次</string>
+    <string name="gameOver">祝贺您已完成所有题目</string>
 </resources>
